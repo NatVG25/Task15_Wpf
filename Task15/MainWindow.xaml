@@ -1,0 +1,142 @@
+﻿<Window x:Class="Task15.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Task15"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="700" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <FlowDocumentScrollViewer x:Name ="docViewer">
+            <FlowDocument>
+                <Paragraph FontSize="24" FontFamily="Arial">
+                    <Floater Width="230" HorizontalAlignment="Left" >
+                        <BlockUIContainer>
+                            <Image Source="Data/bag.jpg" Height="165" Width="185"/>
+                        </BlockUIContainer>
+                    </Floater>
+                    <Bold>Сумка на плечо</Bold>
+                    <Hyperlink NavigateUri="https://www.lamoda.ru/b/29540/brand-marina-creazioni/">Marina Creazioni
+                    </Hyperlink>
+                </Paragraph>
+                <Paragraph FontSize="26" Foreground="red">
+                    8999Р
+                </Paragraph>
+                <Paragraph FontSize="18">
+                    <Italic>Сумки Marina Creazioni разработаны итальянскими дизайнерами 
+                    в соответствии с последними тенденциями в моде. 
+                    При производстве используется только натуральная кожа высочайшего качества.</Italic>
+                </Paragraph>
+                <List MarkerStyle="Circle" Margin="60" Padding="10" FontSize="18">
+                    <ListItem>
+                        <Paragraph>
+                            Сумка выполнена из натуральной кожи
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Застежка на магнит
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            Внутри 1 карман на молнии
+                        </Paragraph>
+                    </ListItem>
+                    <ListItem>
+                        <Paragraph>
+                            1 внешний карман на молнии
+                        </Paragraph>
+                    </ListItem>
+
+
+
+                </List>
+                <Section FontSize="16" Background="Bisque">
+                    <Table Margin="60" >
+                        <Table.Columns>
+                            <TableColumn Width="0.5*"/>
+                            <TableColumn Width="*"/>
+                        </Table.Columns>
+                        <TableRowGroup>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>
+                                        Материал верха:
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        Натуральная кожа
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>
+                                        Ширина:
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        20 см
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>
+                                        Высота:
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        18 см
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>
+                                        Цвет:
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        Мультиколор
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                            <TableRow>
+                                <TableCell>
+                                    <Paragraph>
+                                        Страна производства:
+                                    </Paragraph>
+                                </TableCell>
+                                <TableCell>
+                                    <Paragraph>
+                                        Италия
+                                    </Paragraph>
+                                </TableCell>
+                            </TableRow>
+                        </TableRowGroup>
+                    </Table>
+                </Section>
+                <BlockUIContainer>
+                    <StackPanel>
+                        <Button Content="Добавить в корзину" Background="Blue" Foreground="White" Width="200" Height="30"/>
+                    </StackPanel>
+                </BlockUIContainer>
+            </FlowDocument>
+        </FlowDocumentScrollViewer>
+        <StackPanel Grid.Row="1" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Открыть" Width="100" Background="LightBlue" Click="Button_Click_2"/>
+            <Button Content="Сохранить" Width="100" Background="LightPink" Click="Button_Click_1"/>
+            <Button Content="Очистить" Width="100" Background="LightYellow" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
